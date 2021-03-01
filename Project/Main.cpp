@@ -4,21 +4,24 @@
 #include <cstdlib>
 #pragma region variables
 sf::RenderWindow window;
-sf::CircleShape cercle;
+sf::CircleShape cercle(100, 100000);
+sf::RectangleShape Base;
+int FX = 1920, FY = 1080;   //taille fenêtre en X et Y;
 #pragma endregion varaibles
 
 
 int main(){
-    window.create(sf::VideoMode(800, 600), "Project Programmation");
+    window.create(sf::VideoMode(FX, FY), "Project Programmation");
     window.setFramerateLimit(144);
 
     std::cout << "Lancement du jeu" << std::endl;
 
-    cercle.setFillColor(sf::Color(100, 250, 150));
-    cercle.setRadius(100);
-    cercle.setPosition(300, 200);
-    cercle.setOutlineColor(sf::Color(100, 100, 100));
+    cercle.setFillColor(sf::Color::Yellow);
+    cercle.setPosition(FX/2-100, FY/2-100);
+    cercle.setOutlineColor(sf::Color::Black);
     cercle.setOutlineThickness(2);
+    Base.setFillColor(sf::Color::White);
+    Base.setSize(sf::Vector2f(FX, FY));
 
 
     while (window.isOpen()){
@@ -29,6 +32,7 @@ int main(){
                 window.close();
         }
         window.clear();
+        window.draw(Base);
         window.draw(cercle);
         window.display();
         window.clear();
