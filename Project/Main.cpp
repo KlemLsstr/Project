@@ -6,7 +6,8 @@
 sf::RenderWindow window;
 sf::CircleShape cercle(100, 100000);
 sf::RectangleShape Base;
-int FX = 1920, FY = 1080;   //taille fenêtre en X et Y;
+sf::CircleShape triangle(50, 3);
+int FX = 960, FY = 540;   //taille fenêtre en X et Y;
 #pragma endregion varaibles
 
 
@@ -22,6 +23,8 @@ int main(){
     cercle.setOutlineThickness(2);
     Base.setFillColor(sf::Color::White);
     Base.setSize(sf::Vector2f(FX, FY));
+    triangle.setFillColor(sf::Color::Black);
+    triangle.setPosition(FX / 2 - 50, FY / 2 - 50);
 
 
     while (window.isOpen()){
@@ -34,6 +37,7 @@ int main(){
         window.clear();
         window.draw(Base);
         window.draw(cercle);
+        window.draw(triangle);
         window.display();
         window.clear();
     }
