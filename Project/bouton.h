@@ -9,13 +9,15 @@ class Bouton {
 public:
 	Bouton(){}
 
-	Bouton(std::string t, sf::Vector2f size,int charSize, sf::Color bgColor, sf::Color textColor) {
+	Bouton(std::string t, sf::Vector2f size,int charSize, sf::Color bgColor, sf::Color textColor, sf::Color Contour, int eTour) {
 		text.setString(t);
 		text.setFillColor(textColor);
 		text.setCharacterSize(charSize);
 		
 		Button.setSize(size);
 		Button.setFillColor(bgColor);
+		Button.setOutlineColor(Contour);
+		Button.setOutlineThickness(eTour);
 
 	}
 
@@ -24,6 +26,10 @@ public:
 	}
 
 	void setBackColor(sf::Color color) {
+		Button.setFillColor(color);
+	}
+
+	void setTextColor(sf::Color color) {
 		text.setFillColor(color);
 	}
 
