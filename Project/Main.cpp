@@ -2,17 +2,11 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include "Shape.h"
+
 #include "Menu.h"
 
 #pragma region variables
 sf::RenderWindow window;
-sf::RectangleShape Base; //Fond blanc
-sf::RectangleShape rec;
-sf::RectangleShape rec2; //rectangle
-sf::CircleShape cercle;
-sf::Text text1;
-sf::Vector2i PosSouris;
 int FX = 960, FY = 540;   //taille fenêtre en X et Y
 
 #pragma endregion varaibles

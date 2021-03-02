@@ -18,11 +18,11 @@
     <ClCompile Include="Main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="clem.cpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Shape.h">
-      <Filter>Fichiers sources</Filter>
-    </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>

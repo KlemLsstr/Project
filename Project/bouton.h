@@ -9,7 +9,7 @@ class Bouton {
 public:
 	Bouton(){}
 
-	Bouton(std::string t, sf::Vector2f size,int charSize, sf::Color bgColor, sf::Color textColor, sf::Color Contour, int eTour) {
+	Bouton(std::string t, sf::Vector2f size,int charSize, sf::Color bgColor, sf::Color textColor, sf::Color Contour, int eTour, int _w, int _h) {
 		text.setString(t);
 		text.setFillColor(textColor);
 		text.setCharacterSize(charSize);
@@ -18,6 +18,7 @@ public:
 		Button.setFillColor(bgColor);
 		Button.setOutlineColor(Contour);
 		Button.setOutlineThickness(eTour);
+		w = _w, h = _h;
 
 	}
 
@@ -28,7 +29,12 @@ public:
 	void setBackColor(sf::Color color) {
 		Button.setFillColor(color);
 	}
-
+	void setContourColor(sf::Color color) {
+		Button.setOutlineColor(color);
+	}
+	void setETour(int ET) {
+		Button.setOutlineThickness(ET);
+	}
 	void setTextColor(sf::Color color) {
 		text.setFillColor(color);
 	}
@@ -36,8 +42,8 @@ public:
 	void setPosition(sf::Vector2f pos) {
 		Button.setPosition(pos);
 
-		float xPos = (pos.x + Button.getGlobalBounds().width / 2.625) - (text.getGlobalBounds().width / 2);
-		float yPos = (pos.y + Button.getGlobalBounds().height / 3.5) - (text.getGlobalBounds().height / 2);
+		float xPos = (pos.x + Button.getGlobalBounds().width / w) - (text.getGlobalBounds().width / 2);
+		float yPos = (pos.y + Button.getGlobalBounds().height / h) - (text.getGlobalBounds().height / 2);
 		text.setPosition(xPos, yPos);
 	}
 
@@ -63,6 +69,7 @@ public:
 	}
 
 private:
+	int w, h;
 	sf::RectangleShape Button;
 	sf::Text text;
 
