@@ -24,14 +24,14 @@ public:
 	}
 
 	void setBackColor(sf::Color color) {
-		text.setColor(color);
+		text.setFillColor(color);
 	}
 
 	void setPosition(sf::Vector2f pos) {
 		Button.setPosition(pos);
 
-		float xPos = (pos.x + Button.getGlobalBounds().width / 2) - (text.getGlobalBounds().width / 2);
-		float yPos = (pos.y + Button.getGlobalBounds().height / 2) - (text.getGlobalBounds().height / 2);
+		float xPos = (pos.x + Button.getGlobalBounds().width / 2.625) - (text.getGlobalBounds().width / 2);
+		float yPos = (pos.y + Button.getGlobalBounds().height / 3.5) - (text.getGlobalBounds().height / 2);
 		text.setPosition(xPos, yPos);
 	}
 
@@ -40,7 +40,7 @@ public:
 		window.draw(text);
 	}
 
-	void isMouseOver(sf::RenderWindow& window) {
+	bool isMouseOver(sf::RenderWindow& window) {
 		float mouseX = sf::Mouse::getPosition(window).x;
 		float mouseY = sf::Mouse::getPosition(window).y;
 
@@ -51,8 +51,9 @@ public:
 		float btnyPosHeight = Button.getPosition().y + Button.getLocalBounds().height;
 
 		if (mouseX < btnxPosWidth && mouseX > btnPosX && mouseY < btnyPosHeight && mouseY > btnPosY) {
-
+			return true;
 		}
+		return false;
 	}
 
 private:
