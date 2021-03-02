@@ -23,5 +23,14 @@
     <ClInclude Include="Shape.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="bouton.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

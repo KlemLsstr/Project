@@ -3,13 +3,15 @@
 #include <string>
 #include <cstdlib>
 #include "Shape.h"
+#include "Menu.h"
 
 #pragma region variables
-
-sf::RenderWindow window; //Fenetre
+sf::RenderWindow window;
 sf::RectangleShape Base; //Fond blanc
-sf::RectangleShape rec; //rectangle
+sf::RectangleShape rec;
+sf::RectangleShape rec2; //rectangle
 sf::CircleShape cercle;
+sf::Text text1;
 sf::Vector2i PosSouris;
 int FX = 960, FY = 540;   //taille fenêtre en X et Y
 
@@ -17,58 +19,26 @@ int FX = 960, FY = 540;   //taille fenêtre en X et Y
 
 #pragma region entêtes
 
-void gestion_clavier();
-void gestion_souris();
+//sf::Vector2f gestion_clavier();
+/*sf::RectangleShape gestion_clavier_rec(sf::RectangleShape _r);*/
+//void gestion_souris();
 
 #pragma endregion entêtes
 
 int main(){
-    window.create(sf::VideoMode(FX, FY), "Project Programmation");
-    window.setFramerateLimit(144);
-
-    std::cout << "Lancement du jeu" << std::endl;
-
-    Base.setFillColor(sf::Color::White);
-    Base.setSize(sf::Vector2f(FX, FY));
-
-    rec = rect((FX / 2)-25, ((FY / 2 ) - 12.5) + 100 , 50, 25);
-    rec.setFillColor(sf::Color::Transparent);
-    rec.setOutlineColor(sf::Color(100, 100, 100));
-    rec.setOutlineThickness(2);
-
-    cercle = cer(FX / 2 - 1, FY / 2 - 1, 1, 1000);
-    cercle.setFillColor(sf::Color::Black);
-
-    while (window.isOpen()){
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        gestion_clavier();
-        gestion_souris();
-
-        window.draw(Base);
-        window.draw(rec);
-        //window.draw(milieu);
-        window.display();
-        window.clear();
-    }
-
+    Menu(window);
     return 0;
 }
 
-void gestion_clavier() {
+/*sf::Vector2f gestion_clavier() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        rec.move(0, -1);
+        return sf::Vector2f(0, -1);
     }if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        rec.move(0, 1);
+        return sf::Vector2f(0, 1);
     }if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        rec.move(1, 0);
+        return sf::Vector2f(1, 0);
     }if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        rec.move(-1, 0);
+        return sf::Vector2f(-1, 0);
     }
 }
 
@@ -83,13 +53,13 @@ void gestion_souris() {
 
         if (PosSouris.x >= rec.getPosition().x && PosSouris.x <= rec.getPosition().x + 50 && PosSouris.y >= rec.getPosition().y && PosSouris.y <= rec.getPosition().y + 25) {
             std::cout << "Bienjouer" << std::endl;                                                                                        //Si l'utilisateur clique sur le rectangle (bouton) sa fait la suite....
-            do {
+            for (int i = 0; i <= 144 * 3; i++) {
                 rec.setFillColor(sf::Color(202, 202, 202, 190));
                 rec.setOutlineColor(sf::Color::Black);
                 rec.setOutlineThickness(3);
                 window.clear();
                 window.draw(rec);
-            } while (sf::Mouse::isButtonPressed(sf::Mouse::Left));
+            }
             rec.setFillColor(sf::Color::Transparent);
             rec.setOutlineColor(sf::Color(100, 100, 100));
             rec.setOutlineThickness(2);
@@ -97,4 +67,4 @@ void gestion_souris() {
             window.draw(rec);
         }
     }
-}
+}*/
