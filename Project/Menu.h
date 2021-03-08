@@ -80,29 +80,29 @@ void Menu(sf::RenderWindow &window)
     } */
 
 
-    Bouton btn1("Jouer !", { 100,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1,4,4);
-    btn1.setPosition({ 450 - 50, 500 - 25 });
-    btn1.setFont(arial);
+    Bouton jouer("Jouer !", { 100,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1,4,4);
+    jouer.setPosition({ 450 - 50, 500 - 25 });
+    jouer.setFont(arial);
 
-    Bouton btn2("Placer !", { 100,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 5, 4);
-    btn2.setPosition({ 183 - 50, 500 - 25 });
-    btn2.setFont(arial);
+    Bouton placer("Placer !", { 100,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 5, 4);
+    placer.setPosition({ 183 - 50, 500 - 25 });
+    placer.setFont(arial);
 
-    Bouton btn3("Solution !", { 125,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 5, 4);
-    btn3.setPosition({ 183 - 62.5, 600 - 25 });
-    btn3.setFont(arial);
+    Bouton solution("Solution !", { 125,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 5, 4);
+    solution.setPosition({ 183 - 62.5, 600 - 25 });
+    solution.setFont(arial);
 
-    Bouton btn4("Sauvegarder !", { 125,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 9, 4);
-    btn4.setPosition({ 717 - 62.5, 600 - 25 });
-    btn4.setFont(arial);
+    Bouton sauvegarder("Sauvegarder !", { 125,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 9, 4);
+    sauvegarder.setPosition({ 717 - 62.5, 600 - 25 });
+    sauvegarder.setFont(arial);
 
-    Bouton btn5("Charger !", { 100,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 6, 4);
-    btn5.setPosition({ 717 - 50, 500 - 25 });
-    btn5.setFont(arial);
+    Bouton charger("Charger !", { 100,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 6, 4);
+    charger.setPosition({ 717 - 50, 500 - 25 });
+    charger.setFont(arial);
 
-    Bouton btn6("Quitter !", { 100,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 5, 4);
-    btn6.setPosition({ 450 - 50, 700 - 25 });
-    btn6.setFont(arial);
+    Bouton quitter("Quitter !", { 100,50 }, 16, sf::Color(202, 202, 202, 190), sf::Color::White, sf::Color::Black, 1, 5, 4);
+    quitter.setPosition({ 450 - 50, 700 - 25 });
+    quitter.setFont(arial);
 
     while (window.isOpen()) {
         sf::Event Event;
@@ -113,48 +113,48 @@ void Menu(sf::RenderWindow &window)
             //case sf::Event::TextEntered:
               //  textbox1.typedOn(Event);
             case sf::Event::MouseMoved:
-                if (btn1.isMouseOver(window)) {
-                    btn1.setBackColor(sf::Color(54, 58, 59));
-                    btn1.setTextColor(sf::Color(66, 156, 227));
+                if (jouer.isMouseOver(window)) {
+                    jouer.setBackColor(sf::Color(54, 58, 59));
+                    jouer.setTextColor(sf::Color(66, 156, 227));
                 }
-                else if (btn2.isMouseOver(window)) {
-                    btn2.setBackColor(sf::Color(54, 58, 59));
-                    btn2.setTextColor(sf::Color(66, 156, 227));
+                else if (placer.isMouseOver(window)) {
+                    placer.setBackColor(sf::Color(54, 58, 59));
+                    placer.setTextColor(sf::Color(66, 156, 227));
                 }
-                else if (btn3.isMouseOver(window)) {
-                    btn3.setBackColor(sf::Color(54, 58, 59));
-                    btn3.setTextColor(sf::Color(66, 156, 227));
+                else if (solution.isMouseOver(window)) {
+                    solution.setBackColor(sf::Color(54, 58, 59));
+                    solution.setTextColor(sf::Color(66, 156, 227));
                 }
-                else if (btn4.isMouseOver(window)) {
-                    btn4.setBackColor(sf::Color(54, 58, 59));
-                    btn4.setTextColor(sf::Color(66, 156, 227));
+                else if (sauvegarder.isMouseOver(window)) {
+                    sauvegarder.setBackColor(sf::Color(54, 58, 59));
+                    sauvegarder.setTextColor(sf::Color(66, 156, 227));
                 }
-                else if (btn5.isMouseOver(window)) {
-                    btn5.setBackColor(sf::Color(54, 58, 59));
-                    btn5.setTextColor(sf::Color(66, 156, 227));
+                else if (charger.isMouseOver(window)) {
+                    charger.setBackColor(sf::Color(54, 58, 59));
+                    charger.setTextColor(sf::Color(66, 156, 227));
                 }
-                else if (btn6.isMouseOver(window)) {
-                    btn6.setBackColor(sf::Color(54, 58, 59));
-                    btn6.setTextColor(sf::Color(66, 156, 227));
+                else if (quitter.isMouseOver(window)) {
+                    quitter.setBackColor(sf::Color(54, 58, 59));
+                    quitter.setTextColor(sf::Color(66, 156, 227));
                 }
                 else {
-                    btn1.setBackColor(sf::Color(32, 36, 37));
-                    btn1.setTextColor(sf::Color::White);
+                    jouer.setBackColor(sf::Color(32, 36, 37));
+                    jouer.setTextColor(sf::Color::White);
 
-                    btn2.setBackColor(sf::Color(32, 36, 37));
-                    btn2.setTextColor(sf::Color::White);
+                    placer.setBackColor(sf::Color(32, 36, 37));
+                    placer.setTextColor(sf::Color::White);
 
-                    btn3.setBackColor(sf::Color(32, 36, 37));
-                    btn3.setTextColor(sf::Color::White);
+                    solution.setBackColor(sf::Color(32, 36, 37));
+                    solution.setTextColor(sf::Color::White);
 
-                    btn4.setBackColor(sf::Color(32, 36, 37));
-                    btn4.setTextColor(sf::Color::White);
+                    sauvegarder.setBackColor(sf::Color(32, 36, 37));
+                    sauvegarder.setTextColor(sf::Color::White);
 
-                    btn5.setBackColor(sf::Color(32, 36, 37));
-                    btn5.setTextColor(sf::Color::White);
+                    charger.setBackColor(sf::Color(32, 36, 37));
+                    charger.setTextColor(sf::Color::White);
 
-                    btn6.setBackColor(sf::Color(32, 36, 37));
-                    btn6.setTextColor(sf::Color::White);
+                    quitter.setBackColor(sf::Color(32, 36, 37));
+                    quitter.setTextColor(sf::Color::White);
                 }
             }
         }
@@ -171,18 +171,21 @@ void Menu(sf::RenderWindow &window)
 
 
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-            if (btn6.isMouseOver(window)) {
+            if (quitter.isMouseOver(window)) {
                 std::cout << "Quitter" << std::endl;
                 window.close();
             }
+            if (jouer.isMouseOver(window)) {
+
+            }
         }
 
-        btn1.drawTo(window);
-        btn2.drawTo(window);
-        btn3.drawTo(window);
-        btn4.drawTo(window);
-        btn5.drawTo(window);
-        btn6.drawTo(window);
+        jouer.drawTo(window);
+        placer.drawTo(window);
+        solution.drawTo(window);
+        sauvegarder.drawTo(window);
+        charger.drawTo(window);
+        quitter.drawTo(window);
 
         //textbox1.drawTo(window);
         window.display();
