@@ -5,6 +5,9 @@
 #include <cstdlib>
 #include "TextBox.h"
 #include "bouton.h"
+#include "Jouer.h"
+#include "Sauv_charger.h"
+#include "sol_placer.h"
 
 
 
@@ -175,8 +178,20 @@ void Menu(sf::RenderWindow &window)
                 std::cout << "Quitter" << std::endl;
                 window.close();
             }
-            if (jouer.isMouseOver(window)) {
-
+            else if (jouer.isMouseOver(window)) {
+                Jouer(window);
+            }
+            else if (charger.isMouseOver(window)) {
+                Charger(window);
+            }
+            else if (sauvegarder.isMouseOver(window)) {
+                Sauvegarder(window);
+            }
+            else if (placer.isMouseOver(window)) {
+                Placer(window);
+            }
+            else if (solution.isMouseOver(window)) {
+                Solution(window);
             }
         }
 
