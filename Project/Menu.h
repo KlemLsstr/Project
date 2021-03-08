@@ -11,7 +11,7 @@
 #pragma region variables
 sf::RectangleShape Base;
 sf::RectangleShape Base2;
-sf::CircleShape Base3;
+sf::CircleShape Base3(450,1000000);
 sf::CircleShape Base4(70,3);
 sf::RectangleShape Base5;
 sf::RectangleShape Base6;
