@@ -7,17 +7,17 @@
 
 #pragma region variables
 sf::RenderWindow window;
-int FX = 960, FY = 540;   //taille fenêtre en X et Y
+int FX = 960, FY = 540;   //taille fenÃªtre en fonction de X et de Y
 
 #pragma endregion varaibles
 
-#pragma region entêtes
+#pragma region entÃªtes
 
 //sf::Vector2f gestion_clavier();
 /*sf::RectangleShape gestion_clavier_rec(sf::RectangleShape _r);*/
 //void gestion_souris();
 
-#pragma endregion entêtes
+#pragma endregion entÃªtes
 
 int main(){
     Menu(window);
